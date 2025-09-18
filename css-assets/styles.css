@@ -289,3 +289,77 @@ footer {
         grid-template-columns: 1fr; /* Single column on small screens */
     }
 }
+
+/*
+ * --------------------------------------------------------------------------
+ * Typography Styles
+ *
+ * This section defines the font styles for headings and other text elements
+ * to create a harmonious typographic hierarchy.
+ * --------------------------------------------------------------------------
+ */
+
+ html {
+    /* Sets the base font for the entire site */
+    font-family: 'Lato', sans-serif;
+    font-size: 16px; /* A more modern and accessible base font size */
+    color: var(--color-text);
+}
+
+/* Base styles for all links */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Link hover effect */
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Headings (h1, h2, h3) for a strong typographic hierarchy */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Decorative font for emphasis */
+    color: var(--color-primary);
+    font-weight: 700; /* Bold for strong visual impact */
+    margin-bottom: 0.75em;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem; /* Larger size for the main heading */
+    letter-spacing: -0.05em; /* Tighten for a more professional look */
+}
+
+h2 {
+    font-size: 2.2rem;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 1.6rem;
+    letter-spacing: 0.01em;
+}
+
+/* Paragraphs for easy readability */
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Regular weight for body text */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/*
+ * --------------------------------------------------------------------------
+ * Call-to-Action (CTA) Button
+ * --------------------------------------------------------------------------
+ */
+.cta-button, .add-to-cart-button, .submit-button {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 12px 24px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
