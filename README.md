@@ -8,8 +8,15 @@ Design and User Experience (UX) The design will aim for a warm, rustic, and hand
 Technical Requirements • Hosting and Domain: A reliable web hosting service with an SSL certificate is required. The domain name will be thedailycrumb.co.za. • Programming Languages and Frameworks: The website will be built using a robust, content-management system (CMS) such as WordPress, which offers flexibility and a wide range of e-commerce plugins. Front-end technologies will include HTML5, CSS3, and JavaScript.
 Timeline and Milestones • Week 1-2: Project kick-off, research, and proposal finalisation. • Week 3-4: Design and wireframing of the website layout. • Week 5-6: Content creation and photography. • Week 7-9: Website development (front-end and back-end). • Week 10: Testing, quality assurance, and deployment. • Week 11-12: Final review and launch.
 Budget The estimated budget for this project includes: • Development: R15,000 - R20,000 (includes design, e-commerce integration, and basic SEO). • Hosting & Domain: R1,500 per year.
-Changelog:
 
-Added file and folder structure. Created index.html, about.html, menu.html, shop.html, contact.html, blog.html files.
+Changelog:
+Added file and folder structure. 
+Created index.html, about.html, menu.html, shop.html, contact.html, blog.html files.
 Added images to the images folder.
 Added content and images to my website.
+Added CSS styling/stylesheet.
+Added a gentle gradient to the background of the website.
+Added typograpghy to font.
+Replaced image index.html with a new image.
+Updated shop.html code.
+
