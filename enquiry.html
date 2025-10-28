@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Order Enquiry - The Daily Crumb</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">The Daily Crumb</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Online Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="enquiry-section">
+        <h1>Custom & Bulk Order Enquiries</h1>
+        <p>
+          Use this form to inquire about custom celebration cakes, bulk orders
+          for events, or wholesale prices. Please provide as much detail as
+          possible so we can get back to you quickly with an accurate quote.
+        </p>
+
+        <form
+          action="#"
+          method="post"
+          class="enquiry-form"
+          onsubmit="return validateEnquiryForm()"
+        >
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="enquiry-name" name="name" />
+            <span id="enquiry-name-error" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="enquiry-email" name="email" />
+            <span id="enquiry-email-error" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="product">Product of Interest</label>
+            <select id="product" name="product">
+              <option value="">-- Select a Product Type --</option>
+              <option value="cake">Custom Cake</option>
+              <option value="bulk_pastry">
+                Bulk Pastries (e.g., Croissants)
+              </option>
+              <option value="wholesale_bread">Wholesale Bread</option>
+              <option value="other">Other/Event Catering</option>
+            </select>
+            <span id="product-error" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity"
+              >Estimated Quantity (e.g., 50 units or serves 30)</label
+            >
+            <input type="text" id="quantity" name="quantity" />
+            <span id="quantity-error" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Required Details & Message</label>
+            <textarea id="details" name="details" rows="6"></textarea>
+            <span id="details-error" class="error-message"></span>
+          </div>
+
+          <button type="submit" class="submit-button">Submit Enquiry</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 The Daily Crumb. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function validateEnquiryForm() {
+        let isValid = true;
+
+        // Helper function to show/hide error messages
+        function displayError(id, message) {
+          document.getElementById(id).textContent = message;
+        }
+
+        // 1. Validate Name
+        const nameInput = document.getElementById("enquiry-name");
+        const nameValue = nameInput.value.trim();
+        if (nameValue === "") {
+          displayError(
+            "enquiry-name-error",
+            "Your name is required for the enquiry."
+          );
+          isValid = false;
+        } else {
+          displayError("enquiry-name-error", "");
+        }
+
+        // 2. Validate Email
+        const emailInput = document.getElementById("enquiry-email");
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailValue === "") {
+          displayError("enquiry-email-error", "A contact email is required.");
+          isValid = false;
+        } else if (!emailRegex.test(emailValue)) {
+          displayError(
+            "enquiry-email-error",
+            "Please enter a valid email address."
+          );
+          isValid = false;
+        } else {
+          displayError("enquiry-email-error", "");
+        }
+
+        // 3. Validate Product Selection
+        const productSelect = document.getElementById("product");
+        if (productSelect.value === "") {
+          displayError("product-error", "Please select a product type.");
+          isValid = false;
+        } else {
+          displayError("product-error", "");
+        }
+
+        // 4. Validate Details (Long message/details)
+        const detailsInput = document.getElementById("details");
+        const detailsValue = detailsInput.value.trim();
+
+        if (detailsValue === "") {
+          displayError(
+            "details-error",
+            "Please provide details about your order."
+          );
+          isValid = false;
+        } else if (detailsValue.length < 20) {
+          displayError(
+            "details-error",
+            "Details must be at least 20 characters long."
+          );
+          isValid = false;
+        } else {
+          displayError("details-error", "");
+        }
+
+        // 5. Validate Quantity (optional, but if provided, must be a number)
+        const quantityInput = document.getElementById("quantity");
+        const quantityValue = quantityInput.value.trim();
+        const quantityRegex = /^[0-9\s]+$/;
+
+        if (
+          quantityValue !== "" &&
+          !quantityRegex.test(quantityValue.replace(/\D/g, ""))
+        ) {
+          displayError(
+            "quantity-error",
+            "Quantity should be a number (or a text description of servings)."
+          );
+          isValid = false;
+        } else {
+          displayError("quantity-error", "");
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>
