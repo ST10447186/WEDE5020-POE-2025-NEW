@@ -338,3 +338,96 @@ footer {
   /* Ensures the message is on its own line */
   margin-top: 5px;
 }
+
+/* ------------------------------------ */
+
+/* Interactive Elements: Accordion Styling */
+
+/* ------------------------------------ */
+
+.menu-accordion {
+  border: 1px solid var(--color-secondary);
+  border-radius: 8px;
+  margin-top: 2rem;
+  overflow: hidden;
+  /* Ensures borders look seamless */
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+  /* Remove border from the last item */
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--color-secondary);
+  /* Light cream background */
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f0d5ac;
+  /* Slightly darker on hover */
+}
+
+.accordion-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.accordion-header .icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+/* State for the active (open) accordion header */
+
+.accordion-header[aria-expanded="true"] {
+  background-color: #e6c89d;
+}
+
+/* Rotate the icon when the accordion is open */
+
+.accordion-header[aria-expanded="true"] .icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  background-color: white;
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* State for the active (open) accordion content */
+
+.accordion-content.active {
+  max-height: 500px;
+  /* Large enough value to reveal content */
+  padding: 1.5rem;
+  transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+}
+
+.accordion-content ul {
+  list-style: disc inside;
+  padding-left: 1.5rem;
+}
+
+.accordion-content li {
+  margin-bottom: 0.5rem;
+}
