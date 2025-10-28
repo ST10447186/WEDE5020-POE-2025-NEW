@@ -1,0 +1,11 @@
+# robots.txt for The Daily Crumb Bakery
+
+# Allow all major search engine bots (Google, Bing, etc.)
+User-agent: *
+
+# Disallow pages you don't want indexed (e.g., admin or thank-you pages)
+# Since you have no admin pages, we'll keep this clean.
+# Disallow: /thank-you.html
+
+# List the location of your Sitemap.xml file
+Sitemap: http://www.thedailycrumb.com/sitemap.xml
