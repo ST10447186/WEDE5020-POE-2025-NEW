@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - The Daily Crumb</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">The Daily Crumb</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="shop.html">Online Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <section class="contact-section">
         <h1>Send Us a Message</h1>
@@ -60,8 +79,126 @@
           <button type="submit" class="submit-button">Send Message</button>
         </form>
       </section>
+
+      <section class="location-section">
+        <h2>Find Us Here</h2>
+        <p>
+          We are located at 9 Mackay Ave, Blairgowrie, Johannesburg. Come visit
+          us for the freshest bakes!
+        </p>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5222045558183!2d28.0140711!3d-26.1133057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950ed8f8303f25%3A0xf639a04a570081d6!2sPatisserie%20de%20Paris!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Location of The Daily Crumb Bakery"
+          ></iframe>
+        </div>
+
+        <div class="hours-info">
+          <h3>Our Hours:</h3>
+          <ul>
+            <li>**Monday - Friday:** 7:00 AM - 4:00 PM</li>
+            <li>**Saturday - Sunday:** 7:00 AM - 2:00 PM</li>
+          </ul>
+          <p>
+            <a href="http://www.patisseriedeparis.co.za/"
+              >Visit the location's website for more details</a
+            >.
+          </p>
+        </div>
+      </section>
     </main>
 
-    <script></script>
+    <footer>
+      <p>&copy; 2025 The Daily Crumb. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function validateForm() {
+        let isValid = true;
+
+        // Helper function to show/hide error messages
+        function displayError(id, message) {
+          document.getElementById(id).textContent = message;
+        }
+
+        // 1. Validate Name
+        const nameInput = document.getElementById("name");
+        const nameValue = nameInput.value.trim();
+        const nameRegex = /^[a-zA-Z\s]+$/;
+
+        if (nameValue === "") {
+          displayError("name-error", "Name is required.");
+          isValid = false;
+        } else if (!nameRegex.test(nameValue)) {
+          displayError(
+            "name-error",
+            "Name must contain only letters and spaces."
+          );
+          isValid = false;
+        } else {
+          displayError("name-error", ""); // Clear error
+        }
+
+        // 2. Validate Email
+        const emailInput = document.getElementById("email");
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailValue === "") {
+          displayError("email-error", "Email is required.");
+          isValid = false;
+        } else if (!emailRegex.test(emailValue)) {
+          displayError("email-error", "Please enter a valid email address.");
+          isValid = false;
+        } else {
+          displayError("email-error", ""); // Clear error
+        }
+
+        // 3. Validate Message
+        const messageInput = document.getElementById("message");
+        const messageValue = messageInput.value.trim();
+
+        if (messageValue === "") {
+          displayError("message-error", "A message is required.");
+          isValid = false;
+        } else if (messageValue.length < 10) {
+          displayError(
+            "message-error",
+            "Message must be at least 10 characters long."
+          );
+          isValid = false;
+        } else {
+          displayError("message-error", ""); // Clear error
+        }
+
+        // 4. Validate Phone Number (Optional, but if present, check format)
+        const phoneInput = document.getElementById("phone");
+        const phoneValue = phoneInput.value.trim();
+        const phoneRegex = /^\d{10}$/;
+
+        if (
+          phoneValue !== "" &&
+          !phoneRegex.test(phoneValue.replace(/\D/g, ""))
+        ) {
+          displayError(
+            "phone-error",
+            "Phone number must be exactly 10 digits."
+          );
+          isValid = false;
+        } else {
+          displayError("phone-error", ""); // Clear error
+        }
+
+        // If isValid is true, the form submits. If false, submission is blocked.
+        return isValid;
+      }
+    </script>
   </body>
 </html>
