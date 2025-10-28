@@ -79,6 +79,44 @@
       </div>
     </main>
 
-    <script></script>
+    <script>
+      // JavaScript for Accordion Functionality on menu.html
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const headers = document.querySelectorAll(".accordion-header");
+
+        headers.forEach((header) => {
+          header.addEventListener("click", () => {
+            const currentItem = header.parentElement;
+            const content = header.nextElementSibling;
+
+            // Check current state (true means it is currently open)
+            const isCurrentlyExpanded =
+              header.getAttribute("aria-expanded") === "true";
+
+            // First, close all other open accordion items
+            document
+              .querySelectorAll('.accordion-header[aria-expanded="true"]')
+              .forEach((openHeader) => {
+                if (openHeader !== header) {
+                  openHeader.setAttribute("aria-expanded", "false");
+                  openHeader.nextElementSibling.classList.remove("active");
+                }
+              });
+
+            // Toggle the clicked accordion item
+            if (isCurrentlyExpanded) {
+              // If it was open, close it
+              header.setAttribute("aria-expanded", "false");
+              content.classList.remove("active");
+            } else {
+              // If it was closed, open it
+              header.setAttribute("aria-expanded", "true");
+              content.classList.add("active");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
