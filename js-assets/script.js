@@ -3,15 +3,25 @@
 function validateForm() {
   let isValid = true;
 
-  // Helper function to show/hide error messages
+  // Helper function to show/clear error messages
   function displayError(id, message) {
     document.getElementById(id).textContent = message;
+    // Highlight the input field itself by adding an 'error' class (requires CSS styling)
+    const inputId = id.replace("-error", "");
+    const inputElement = document.getElementById(inputId);
+
+    if (message) {
+      inputElement.classList.add("input-error");
+    } else {
+      inputElement.classList.remove("input-error");
+    }
   }
 
-  // 1. Validate Name (must not be empty and must be letters only)
+  // --- 1. Validate Name (must not be empty and must be letters only) ---
   const nameInput = document.getElementById("name");
   const nameValue = nameInput.value.trim();
   const nameRegex = /^[a-zA-Z\s]+$/;
+  displayError("name-error", ""); // FIX: Clear previous error first
 
   if (nameValue === "") {
     displayError("name-error", "Name is required.");
@@ -19,29 +29,30 @@ function validateForm() {
   } else if (!nameRegex.test(nameValue)) {
     displayError("name-error", "Name must contain only letters and spaces.");
     isValid = false;
-  } else {
-    displayError("name-error", ""); // Clear error
   }
 
-  // 2. Validate Email (must not be empty and must be a valid format)
+  // --- 2. Validate Email (must not be empty and must be a valid format) ---
   const emailInput = document.getElementById("email");
   const emailValue = emailInput.value.trim();
-  // Basic email regex (not exhaustive, but sufficient for basic validation)
+  // Basic email regex (sufficient for basic validation)
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  displayError("email-error", ""); // FIX: Clear previous error first
 
   if (emailValue === "") {
     displayError("email-error", "Email is required.");
     isValid = false;
   } else if (!emailRegex.test(emailValue)) {
-    displayError("email-error", "Please enter a valid email address.");
+    displayError(
+      "email-error",
+      "Please enter a valid email address (e.g., example@domain.com)."
+    );
     isValid = false;
-  } else {
-    displayError("email-error", ""); // Clear error
   }
 
-  // 3. Validate Message (must not be empty)
+  // --- 3. Validate Message (must not be empty and minimum length) ---
   const messageInput = document.getElementById("message");
   const messageValue = messageInput.value.trim();
+  displayError("message-error", ""); // FIX: Clear previous error first
 
   if (messageValue === "") {
     displayError("message-error", "A message is required.");
@@ -52,21 +63,21 @@ function validateForm() {
       "Message must be at least 10 characters long."
     );
     isValid = false;
-  } else {
-    displayError("message-error", ""); // Clear error
   }
 
-  // 4. Validate Phone Number (optional, but if filled, must be 10 digits)
+  // --- 4. Validate Phone Number (optional, but if filled, check format) ---
   const phoneInput = document.getElementById("phone");
   const phoneValue = phoneInput.value.trim();
-  // Regex for 10 digits (allowing for optional spaces/dashes, but checking length)
-  const phoneRegex = /^\d{10}$/;
+  const digitsOnly = phoneValue.replace(/\D/g, ""); // Extract only digits
+  displayError("phone-error", ""); // FIX: Clear previous error first
 
-  if (phoneValue !== "" && !phoneRegex.test(phoneValue.replace(/\D/g, ""))) {
-    displayError("phone-error", "Phone number must be exactly 10 digits.");
+  // FIX: If phoneValue is not empty, check if the digitsOnly string is exactly 10 digits
+  if (phoneValue !== "" && digitsOnly.length !== 10) {
+    displayError(
+      "phone-error",
+      "Phone number, if provided, must be 10 digits (e.g., 5551234567)."
+    );
     isValid = false;
-  } else {
-    displayError("phone-error", ""); // Clear error
   }
 
   // If isValid is true, the form submits. If false, submission is blocked.

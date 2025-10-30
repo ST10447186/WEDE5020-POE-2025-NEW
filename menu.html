@@ -1,91 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Menu - The Daily Crumb</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
     <link rel="stylesheet" href="css-assets/styles.css" />
-  </head>
+</head>
 
-  <body>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">The Daily Crumb</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="shop.html">Online Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-      <h1>Our Delicious Menu</h1>
-      <p>
-        Explore our handcrafted selection of artisanal bread, fresh pastries,
-        and custom cakes, baked daily with love.
-      </p>
+        <h1>Our Delicious Menu</h1>
+        <p>
+            Explore our handcrafted selection of artisanal bread, fresh pastries, and custom cakes, baked daily with love. Click on any item to see a closer look!
+        </p>
 
-      <div class="menu-accordion">
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
+        <section class="gallery">
+            <h2>Featured Bakes Gallery</h2>
+            <div class="gallery-container">
+                <a href="_images/sourdough.webp" class="gallery-item" data-index="0" data-caption="Classic Sourdough Loaf" role="button" tabindex="0">
+                    <img src="_images/sourdough.webp" alt="Sourdough" />
+                </a>
+
+                <a href="_images/almondcroissant.jpg" class="gallery-item" data-index="1" data-caption="Almond Croissant" role="button" tabindex="0">
+                    <img src="_images/almondcroissant.jpg" alt="Croissant" />
+                </a>
+
+                <a href="_images/rosemaryfocaccia.jpg" class="gallery-item" data-index="2" data-caption="Rosemary Focaccia" role="button" tabindex="0">
+                    <img src="_images/rosemaryfocaccia.jpg" alt="Focaccia" />
+                </a>
+            </div>
+        </section>
+
+        <div class="menu-accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" id="heading-bread" aria-controls="content-bread">
             <h2>🥖 Artisanal Bread</h2>
             <span class="icon">+</span>
           </button>
-          <div class="accordion-content">
-            <ul>
-              <li>
-                Classic Sourdough: Naturally leavened, with a perfect crust and
-                tangy crumb.
-              </li>
-              <li>
-                Rosemary Focaccia: Light, airy, topped with fresh rosemary and
-                sea salt.
-              </li>
-              <li>
-                Seeded Multigrain: Packed with flax, pumpkin, and sunflower
-                seeds.
-              </li>
-            </ul>
-          </div>
-        </div>
+                <div class="accordion-content" id="content-bread" aria-labelledby="heading-bread">
+                    <ul>
+                        <li>
+                            Classic Sourdough: Naturally leavened, with a perfect crust and tangy crumb.
+                        </li>
+                        <li>
+                            Rosemary Focaccia: Light, airy, topped with fresh rosemary and sea salt.
+                        </li>
+                        <li>
+                            Seeded Multigrain: Packed with flax, pumpkin, and sunflower seeds.
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" id="heading-pastries" aria-controls="content-pastries">
             <h2>🥐 Fresh Pastries</h2>
             <span class="icon">+</span>
           </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Classic Butter Croissant: Light, flaky, and golden brown.</li>
-              <li>
-                Almond Croissant: Filled with frangipane and topped with sliced
-                almonds.
-              </li>
-              <li>
-                Seasonal Danish: Rotating selection with fresh local fruit.
-              </li>
-            </ul>
-          </div>
-        </div>
+                <div class="accordion-content" id="content-pastries" aria-labelledby="heading-pastries">
+                    <ul>
+                        <li>Classic Butter Croissant: Light, flaky, and golden brown.</li>
+                        <li>
+                            Almond Croissant: Filled with frangipane and topped with sliced almonds.
+                        </li>
+                        <li>
+                            Seasonal Danish: Rotating selection with fresh local fruit.
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" id="heading-cakes" aria-controls="content-cakes">
             <h2>🎂 Custom Cakes</h2>
             <span class="icon">+</span>
           </button>
-          <div class="accordion-content">
-            <p>
-              We create custom cakes for any occasion! Please use the Enquiry
-              page for a quote.
-            </p>
-            <ul>
-              <li>Flavors: Vanilla Bean, Chocolate Ganache, Red Velvet.</li>
-              <li>Fillings: Lemon Curd, Cream Cheese, Salted Caramel.</li>
-            </ul>
-          </div>
+                <div class="accordion-content" id="content-cakes" aria-labelledby="heading-cakes">
+                    <p>
+                        We create custom cakes for any occasion! Please use the Enquiry page for a quote.
+                    </p>
+                    <ul>
+                        <li>Flavors: Vanilla Bean, Chocolate Ganache, Red Velvet.</li>
+                        <li>Fillings: Lemon Curd, Cream Cheese, Salted Caramel.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </main>
 
-    <script>
-      // JavaScript for Accordion Functionality on menu.html
+    <footer>
+        <p>&copy; 2025 The Daily Crumb. All Rights Reserved.</p>
+    </footer>
 
+    <div id="lightbox" class="lightbox" aria-modal="true" role="dialog">
+        <span id="close-btn" class="close-btn" role="button" tabindex="0" aria-label="Close Lightbox">&times;</span
+      >
+      <button
+        id="prev-btn"
+        class="nav-btn prev-btn"
+        aria-label="Previous Image"
+      >
+        &#10094;
+      </button>
+      <img id="lightbox-image" class="lightbox-content" src="" alt="" />
+      <button id="next-btn" class="nav-btn next-btn" aria-label="Next Image">
+        &#10095;
+      </button>
+      <div id="caption" class="caption"></div>
+    </div>
+
+    <script src="js-assets/lightboxGallery.js" defer></script>
+
+    <script src="js-assets/script.js" defer></script>
+
+    <script>
       document.addEventListener("DOMContentLoaded", () => {
         const headers = document.querySelectorAll(".accordion-header");
 
@@ -94,11 +144,9 @@
             const currentItem = header.parentElement;
             const content = header.nextElementSibling;
 
-            // Check current state (true means it is currently open)
             const isCurrentlyExpanded =
               header.getAttribute("aria-expanded") === "true";
 
-            // First, close all other open accordion items
             document
               .querySelectorAll('.accordion-header[aria-expanded="true"]')
               .forEach((openHeader) => {
@@ -108,13 +156,10 @@
                 }
               });
 
-            // Toggle the clicked accordion item
             if (isCurrentlyExpanded) {
-              // If it was open, close it
               header.setAttribute("aria-expanded", "false");
               content.classList.remove("active");
             } else {
-              // If it was closed, open it
               header.setAttribute("aria-expanded", "true");
               content.classList.add("active");
             }
