@@ -23,6 +23,7 @@ Enhanced form styling.
 Added accordion.
 Intergrated a lightbox.
 Created enquiry.html for form validation.
+Made changes to contact.html.
 Added an embedded map.
 Google fonts linked to all HTML files.
 Added SEO(Search Engine Optimization).
