@@ -27,6 +27,27 @@ Added an embedded map.
 Google fonts linked to all HTML files.
 Added SEO(Search Engine Optimization).
 
+References:
+Better Homes & Gardens ([n.d.]) Classic Sourdough Bread, Available at: https://www.bhg.com/recipe/classic-sourdough-bread/ (Accessed: 29 October 2025).
+Cake Zone ([n.d.]) Cake Zone Homepage, Available at: https://cakezone.co.za/ (Accessed: 29 October 2025).
+Fadi Strik ([n.d.]) Buttery Croissant with Flaky Layers (Photo), Available at: https://fadistrik.com/photo/buttery-croissant-with-flaky-layers/ (Accessed: 29 October 2025).
+Gimme Some Oven ([n.d.]) Rosemary Focaccia Bread, Available at: https://www.gimmesomeoven.com/rosemary-focaccia-bread/ (Accessed: 29 October 2025).
+Inspired Pencil (2023) Cartoon Female Baker (Picture), Available at: https://ar.inspiredpencil.com/pictures-2023/cartoon-female-baker (Accessed: 29 October 2025).
+King Arthur Baking ([n.d.]) Classic Baguettes Recipe, Available at: https://www.kingarthurbaking.com/recipes/classic-baguettes-recipe (Accessed: 29 October 2025).
+Mom's Dish ([n.d.]) Sourdough English Muffins, Available at: https://momsdish.com/sourdough-english-muffins (Accessed: 29 October 2025).
+Olives n' Thyme ([n.d.]) Almond Croissants, Available at: https://olivesnthyme.com/almond-croissants/ (Accessed: 29 October 2025).
+Pinterest ([n.d.]) Pinterest Pin: 72761350229517793, Available at: https://za.pinterest.com/pin/pinterest--72761350229517793/ (Accessed: 29 Occtober 2025).
+Redman Shop ([n.d.]) Artisan Sourdough, Available at: https://redmanshop.com/recipes/artisan-sourdough/ (Accessed: 29 October 2025).
+Wikipedia ([n.d.]) Brown bread, Available at: https://en.wikipedia.org/wiki/Brown_bread (Accessed: 29 October 2025).
+Microsoft. 2023. “CSS, SCSS, and Less support in Visual Studio Code.” [online] Available at: https://code.visualstudio.com/Docs/languages/CSS [Accessed 29 October 2025].
+GeeksforGeeks. 2023. “Best HTML coding practices you must know.” [online] Available at: https://www.geeksforgeeks.org/best-html-coding-practices-you-must-know/ [Accessed 29 October 2025].
+Green Tech Media, 2023. “Funding the future: Financial resources for green startups.” [online] Green Tech Media. Available at: https://www.greentechmedia.com [Accessed 29 October 2025].
+Innovation for Sustainability, 2024. “Networking for impact: The role of communities in sustainable innovation.” [online] Innovation for Sustainability Journal. Available at: https://www.innovationforsustainability.com [Accessed 29 October 2025].
+GeeksforGeeks (2025) How to create form validation by using only HTML?, Available at: https://www.geeksforgeeks.org/html/how-to-create-form-validation-by-using-only-html/ (Accessed: 29 October 2025).
+GeeksforGeeks (2025) HTML <map> Tag, Available at: https://www.geeksforgeeks.org/html/html-map-tag/ (Accessed: 29 October 2025).
+W3Schools ([n.d.]) How To Create a JavaScript Accordion, Available at: https://www.w3schools.com/howto/howto_js_accordion.asp (Accessed: 29 October 2025).
+
+
 
 
 
