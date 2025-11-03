@@ -19,4 +19,14 @@ Added a gentle gradient to the background of the website.
 Added typograpghy to font.
 Replaced image index.html with a new image.
 Updated shop.html code.
+Enhanced form styling.
+Added accordion.
+Intergrated a lightbox.
+Created enquiry.html for form validation.
+Added an embedded map.
+Google fonts linked to all HTML files.
+Added SEO(Search Engine Optimization).
+
+
+
 
